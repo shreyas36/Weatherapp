@@ -1,2 +1,2 @@
 # Weatherapp
-Weather app usig django and openweathermap API. 
+Weather app using django and openweathermap API. 
