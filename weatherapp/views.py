@@ -9,7 +9,7 @@ def index(request):
     city='mumbai'
     cities= City.objects.all()
     #login in openweathermap for API id in url
-    url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid=d2aa5742ef4800a4fceabd18c2483bc2'
+    url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
     if request.method == 'POST':
         #print(request.POST.dict()['name'])
         form = CityForm(request.POST)
