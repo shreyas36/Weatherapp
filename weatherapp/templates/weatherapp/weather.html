@@ -1,0 +1,28 @@
+{% extends "weatherapp/base.html" %}
+{% block body %}
+<!--##################################################################################
+################################ CARDS  ################################################
+################################################################################### -->
+		<div class="container">
+			<div class="row">
+				{% for city_weather in weather_list %}
+					<div class="col-auto">
+						<div class="card border-secondary mb-3" style="width: 18rem; background-color:#71B48D;">
+							<div class="card-header">
+								<nav class="navbar navbar-light" style="background-color:#71B48D;border-radius:10px;">
+									<p class="navbar-brand" >
+										<img src="https://api.openweathermap.org/img/w/{{city_weather.icon}}.png" width="50" height="50" class="d-inline-block align-top" alt="" loading="lazy">
+										<p class="navbar-brand mr-auto" >{{city_weather.city}}</p>
+									</p>
+								</nav>
+							</div>
+							<div class="card-body text-secondary" style="background-color:#86CB92">
+								<h5 class="card-title">{{city_weather.temperature}}°C</h5>
+								<p class="card-text">{{city_weather.description}}</p>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+{% endblock body %}
